@@ -1,0 +1,18 @@
+.Nav {
+    overflow: hidden;
+    background-color: rgba(56, 72, 77, 0.5);
+}
+
+.Nav a {
+    float: right;
+    color: aliceblue;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+}
+
+.Nav a:hover {
+    background-color: rgb(51, 43, 43, 0.8);
+    color: rgba(144, 171, 207, 0.9);
+}
