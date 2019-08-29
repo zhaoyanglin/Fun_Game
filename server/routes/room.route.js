@@ -1,5 +1,7 @@
 const express = require('express');
 const pool = require('../module/pool');
+let CronJob = require('cron').CronJob;
+
 const router = express.Router();
 const createHash = require('hash-generator');
 const hashLength = 16;
@@ -11,6 +13,8 @@ if(req.session.roomId) {
 }else {
     res.send({foundRoom:false})
 }
+console.log('yolo');
+
 });
 
 router.post('/', (req, res) => {
@@ -22,7 +26,6 @@ router.post('/', (req, res) => {
 
     const queryItem = [hash]
 
-
     pool.query(queryText, queryItem)
         .then(() => {
             res.sendStatus(201)
@@ -33,4 +36,14 @@ router.post('/', (req, res) => {
         })
 })
 
+new CronJob('0 0 */6 * * *', () => {
+
+    console.log('cronjob deleting data');
+
+    pool.query('DELETE FROM "room";')
+
+}, null, true, 'America/Los_Angeles');
+
+
+ 
 module.exports = router;
