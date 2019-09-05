@@ -52,6 +52,7 @@ new CronJob('0 0 */6 * * *', () => {
     console.log('cronjob deleting data');
 
     pool.query('DELETE FROM "room";')
+    pool.query('DELETE FROM "player;')
 
 }, null, true, 'America/Los_Angeles');
 

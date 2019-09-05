@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
+import '../GameRoom/GameRoom.css'
+
 class GameRoom extends Component {
 
     state = {
         player: '',
     }
 
-    componentDidUpdate () {
+    componentDidUpdate() {
         if (!this.props.reduxState.roomReducer.foundRoom) {
             this.props.history.push('/')
         }
@@ -28,7 +30,7 @@ class GameRoom extends Component {
     addPlayer = () => {
         this.props.dispatch({ type: 'ADD_PLAYER', payload: this.state })
         this.setState({
-            player:''
+            player: ''
         })
     }
 
@@ -47,18 +49,19 @@ class GameRoom extends Component {
 
         return (
             <div>
-                <div className="GameRoom">
 
-                    <input placeholder="enter initials" onChange={this.setPlayerState} value={this.state.player}/>
+                    <h3>Enter Players Here</h3>
 
-                    <button onClick={() => this.addPlayer()}>Add</button>
-
-                    
-                    <Link to="/StartGame"><button>Start Game </button></Link>
-
+                <div className='inputDiv'>
+                    <input className='input' placeholder="Enter Players" onChange={this.setPlayerState} value={this.state.player} />
                 </div>
 
-                <div>
+                <div className='buttonBoxGameRoom'>
+                    <button className="initialButton" onClick={() => this.addPlayer()}><span>Add</span></button>
+                    <Link to="/StartGame"><button className="initialButton"><span>Start Game</span></button></Link>
+                </div>
+
+                <div className='playerList'>
                     {playerList}
                 </div>
 

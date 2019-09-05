@@ -23,7 +23,7 @@ rule8 = new RuleModel("make the person you dislike the most in the group take tw
 
 rule9 = new RuleModel("you and a guy take a shot", "take a shot then stand up and spin 10 times")
 
-rule10 = new RuleModel("guess the last name of the person to your left, if wrong take a shot", "two shots or kiss the person on your right")
+rule10 = new RuleModel("guess the last name of the person to your left, if wrong take a shot", "two shots or kiss the person on your right(consent needed)")
 
 rule11 = new RuleModel("take a shot with no chaser until your next turn", "sing a song or take two shots")
 

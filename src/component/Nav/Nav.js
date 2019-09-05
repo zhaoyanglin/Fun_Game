@@ -16,7 +16,7 @@ class Nav extends Component {
             <div className="Nav">
 
                 {this.props.reduxState.roomReducer.foundRoom && <a><button onClick={() => this.exitOut()}
-                ><i className="fa fa-sign-out" aria-hidden="true"></i>
+                ><i className="fa fa-sign-out" ></i>
 
                 </button></a>}
 
