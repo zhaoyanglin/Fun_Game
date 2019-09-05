@@ -8,17 +8,18 @@ const hashLength = 16;
 
 router.get('/', (req, res) => {
 
-if(req.session.roomId) {
-    res.send({foundRoom:true})  
-}else {
-    res.send({foundRoom:false})
-}
-console.log('yolo');
+    // console.log('---------------------')
+    // console.log('got here ' , req.session.roomId)
+    if (req.session.roomId) {
+        res.send({ foundRoom: true })
+    } else {
+        res.send({ foundRoom: false })
+    }
 
 });
 
 router.post('/', (req, res) => {
-    console.log('this is the session', req.session);
+    // console.log('this is the session', req.session);
 
     let hash = createHash(hashLength);
     req.session.roomId = hash
@@ -36,6 +37,16 @@ router.post('/', (req, res) => {
         })
 })
 
+router.post('/exit', (req, res) => {
+// console.log('session is being closed=============');
+
+    req.session.destroy((err)=>{
+
+        console.log(err);
+        res.sendStatus(201)
+    })
+})
+
 new CronJob('0 0 */6 * * *', () => {
 
     console.log('cronjob deleting data');
@@ -45,5 +56,5 @@ new CronJob('0 0 */6 * * *', () => {
 }, null, true, 'America/Los_Angeles');
 
 
- 
+
 module.exports = router;

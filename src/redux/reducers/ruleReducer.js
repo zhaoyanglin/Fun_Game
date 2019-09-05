@@ -1,10 +1,10 @@
-const calculatorReducer = (state = {}, action) => {
+const roomReducer = (state = {}, action) => {
     switch (action.type) {
-        case 'ROOM_DATA':
+        case 'RULE_DATA':
             return state = action.payload;
         default:
             return state;
     }
 };
 
-export default calculatorReducer;
+export default roomReducer;

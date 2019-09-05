@@ -1,38 +1,70 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
 
 class GameRoom extends Component {
 
     state = {
-        players: '',
+        player: '',
     }
 
- playerArray = [];
+    componentDidUpdate () {
+        if (!this.props.reduxState.roomReducer.foundRoom) {
+            this.props.history.push('/')
+        }
+    }
+
+    componentDidMount = () => {
+        this.props.dispatch({ type: 'GET_PLAYERS' })
+
+    }
+
+    setPlayerState = (event) => {
+        this.setState({
+            player: event.target.value
+        })
+    }
+
+    addPlayer = () => {
+        this.props.dispatch({ type: 'ADD_PLAYER', payload: this.state })
+        this.setState({
+            player:''
+        })
+    }
 
 
-setPlayerState = (event) => {
-    this.setState({
-        players: event.target.value
-    })
-}
+    render() {
 
-addToArray = (event) => {
-    console.log('this is the players', this.playerArray);
-    this.playerArray.push(event);
-}
+        // console.log('this is the redux state in Game room', this.props.reduxState.playerReducer);
 
+        let playerList = this.props.reduxState.playerReducer.map((data, i) => {
+            return (
+                <ul>
+                    <li key={i}>{data.name}</li>
+                </ul>
+            )
+        })
 
-render() {
+        return (
+            <div>
+                <div className="GameRoom">
 
+                    <input placeholder="enter initials" onChange={this.setPlayerState} value={this.state.player}/>
 
-    return (
-        <div className="GameRoom">
-            <h1>Room number</h1>
-            <input placeholder="enter initials" onChange={this.setPlayerState} />
-            <button onClick={() => this.addToArray(this.state.players)}>Add</button>
-        </div>
-    );
-}
+                    <button onClick={() => this.addPlayer()}>Add</button>
+
+                    
+                    <Link to="/StartGame"><button>Start Game </button></Link>
+
+                </div>
+
+                <div>
+                    {playerList}
+                </div>
+
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = reduxState => ({

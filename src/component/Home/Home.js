@@ -11,13 +11,13 @@ class Home extends Component {
     }
 
     componentDidMount = () => {
-        if (this.props.reduxState.roomReducers.foundRoom) {
+        if (this.props.reduxState.roomReducer.foundRoom) {
             this.props.history.push('/GameRoom')
         }
     }
 
     componentDidUpdate = () => {
-        if (this.props.reduxState.roomReducers.foundRoom) {
+        if (this.props.reduxState.roomReducer.foundRoom) {
             this.props.history.push('/GameRoom')
         }
     }
@@ -27,7 +27,7 @@ class Home extends Component {
     }
 
     render() {
-        console.log('this is the redux state', this.props.reduxState);
+        // console.log('this is the redux state', this.props.reduxState);
 
         return (
             <div className="Home">

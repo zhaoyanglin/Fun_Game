@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import Home from '../Home/Home';
 import Nav from '../Nav/Nav';
 import GameRoom from '../GameRoom/GameRoom';
+import StartGame from '../StartGame/StartGame'
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
             <Nav />
             <Route exact path="/" component={Home}/>
             <Route exact path="/GameRoom" component={GameRoom}/>
+            <Route exact path="/StartGame" component={StartGame}/>
           </div>
         </Router>
       </div>

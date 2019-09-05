@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const session = require('express-session')
 
 const roomRoute = require("./routes/room.route");
+const playerRoute = require("./routes/player.route")
+const ruleRoute = require("./routes/rule.route")
 
 const TWO_HOURS = 1000 * 60 * 60 * 2
 
@@ -36,6 +38,8 @@ app.use(session({
 }))
 
 app.use('/roomInfo', roomRoute);
+app.use('/playersInfo', playerRoute);
+app.use('/ruleInfo', ruleRoute);
 
 app.get('/test', (req, res) => {
     console.log('hi');

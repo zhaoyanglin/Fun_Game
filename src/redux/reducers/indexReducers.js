@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import roomReducers from './roomReducers';
+import roomReducer from './roomReducer';
+import playerReducer from './playerReducer';
+import ruleReducer from './ruleReducer';
 
 const rootReducer = combineReducers({
-    roomReducers
+    roomReducer,
+    playerReducer,
+    ruleReducer
 });
 
 export default rootReducer;
