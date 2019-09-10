@@ -9,7 +9,7 @@ rule1 = new RuleModel("take a shot then say the name of a love one", "person to 
 
 rule2 = new RuleModel("take two shots and tell everyone something you are greatful for", "person on your right take half a shot"),
 
-rule3 = new RuleModel("tell the person on your right what makes him/her cute", "take one shot"),
+rule3 = new RuleModel("tell the person on your right what makes him/her cute, then you take a shot", "take one shot for the homie"),
 
 rule4 = new RuleModel("make anyone take a shot with you", "shotgun a beer(if no beer take 3 shots)"),
 
@@ -23,7 +23,7 @@ rule8 = new RuleModel("make the person you dislike the most in the group take tw
 
 rule9 = new RuleModel("you and a guy take a shot", "take a shot then stand up and spin 10 times")
 
-rule10 = new RuleModel("guess the last name of the person to your left, if wrong take a shot", "two shots or kiss the person on your right(consent needed)")
+rule10 = new RuleModel("guess the last name of the person to your left, fail take a shot", "two shots or kiss the person on your right(consent needed)")
 
 rule11 = new RuleModel("take a shot with no chaser until your next turn", "sing a song or take two shots")
 
@@ -39,7 +39,13 @@ rule16 = new RuleModel("take a shot if you feel loved", "take a shot if you are 
 
 rule17 = new RuleModel("tell someone in the room why he/she is a bad friend or take two shots", "take a shot if you think dogs are cute")
 
-const arrayOfRules = [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17]
+rule18 = new RuleModel("do 10 push ups in 10 seconds, fail take two shots", "take a shot then do ten push ups")
+
+rule19 = new RuleModel("take 3 shots or shotgun a beer", "point to a person you dislike and tell him why, then you both take a shot")
+
+rule20 = new RuleModel("name 10 states in 15 seconds, fail you and the people next to you take 2 shots", "if you have a pet you take a shot, if not the person to your right take a shot")
+
+const arrayOfRules = [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20]
 
 
 module.exports = arrayOfRules;
