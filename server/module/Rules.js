@@ -43,9 +43,11 @@ rule18 = new RuleModel("do 10 push ups in 10 seconds, fail take two shots", "tak
 
 rule19 = new RuleModel("take 3 shots or shotgun a beer", "point to a person you dislike and tell him why, then you both take a shot")
 
-rule20 = new RuleModel("name 10 states in 15 seconds, fail you and the people next to you take 2 shots", "if you have a pet you take a shot, if not the person to your right take a shot")
+rule20 = new RuleModel("name 8 states (10 seconds), fail you and the people next to you take 2 shots", "if you have a pet you take a shot, if not the person to your right take a shot")
 
-const arrayOfRules = [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20]
+rule21 = new RuleModel("name 6 country in South America (10 seconds), fail take two shots", "get up and do 20 jumping jack or take 3 shots")
+
+const arrayOfRules = [rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21]
 
 
 module.exports = arrayOfRules;
