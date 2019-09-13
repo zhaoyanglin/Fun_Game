@@ -60,9 +60,17 @@ class StartGame extends Component {
         let playerArray = this.props.reduxState.playerReducer
         let newPlayerArray = []
         // console.log('this is the playerReducer:', playerArray);
-        for (let i = 0; i < playerArray.length; i++) {
-            let pickedPlayer = playerArray[Math.floor(playerArray.length * Math.random())]
-            newPlayerArray.push(pickedPlayer.name)
+
+        if (playerArray.length < 5) {
+            for (let i = 0; i < 5; i++) {
+                let pickedPlayer = playerArray[Math.floor(playerArray.length * Math.random())]
+                newPlayerArray.push(pickedPlayer.name)
+            }
+        } else {
+            for (let i = 0; i < playerArray.length; i++) {
+                let pickedPlayer = playerArray[Math.floor(playerArray.length * Math.random())]
+                newPlayerArray.push(pickedPlayer.name)
+            }
         }
 
         this.setState({
@@ -152,9 +160,9 @@ class StartGame extends Component {
                 </div>
 
 
-                    {this.state.opOne && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.firstOp}</p></div>}
+                {this.state.opOne && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.firstOp}</p></div>}
 
-                    {this.state.opTwo && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.secondOp}</p></div>}
+                {this.state.opTwo && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.secondOp}</p></div>}
 
 
 
