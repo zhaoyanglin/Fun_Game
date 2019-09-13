@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    height: 100%;
 }
 
 .h3Bar {
@@ -26,13 +25,12 @@
 .gameRoomPlayerList {
     display: flex;
     flex-basis: auto;
-    background-color: rgba(56, 72, 77, 0.5);
+    background: rgba(56, 72, 77, 0.2);
     width: 300px;
     height: 400px;
     align-self: center;
     font-family: 'Courier New', Courier, monospace;
-    border-style: ridge;
-    border-color: rgba(252, 70, 107, .4);
+    border: groove;
     overflow: scroll;
 }
 

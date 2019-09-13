@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import '../StartGame/StartGame.css'
+import '../StartGame/startGameButton.css'
 
 class StartGame extends Component {
 
@@ -103,16 +104,20 @@ class StartGame extends Component {
     applyRule = (key) => {
         if (key === 'opOne') {
             // console.log('this is the option one:', this.props.reduxState.ruleReducer.firstOp);
-            this.setState({
-                showPlayer: false,
-                opOne: true,
-            })
+            setTimeout(() => {
+                this.setState({
+                    showPlayer: false,
+                    opOne: true,
+                })
+            }, 1000);
         } else if (key === 'opTwo') {
             // console.log('this is the option two:', this.props.reduxState.ruleReducer.secondOp);
-            this.setState({
-                showPlayer: false,
-                opTwo: true,
-            })
+            setTimeout(() => {
+                this.setState({
+                    showPlayer: false,
+                    opTwo: true,
+                })
+            }, 1000);
         }
     }
 
@@ -124,8 +129,8 @@ class StartGame extends Component {
 
             <div className='StartGameDivContainer'>
 
-                <div className='StartGamebuttonBox'>
-                    <button className="initialButton" onClick={() => this.allInOne()}><span>Pick Player</span></button>
+                <div className='StartGamePickPlayerDiv'>
+                    <button className="startGamePickPlayerButton" onClick={() => this.allInOne()}><span>Pick Player</span></button>
                 </div>
 
                 <div className='playerNameDiv'>
@@ -140,14 +145,18 @@ class StartGame extends Component {
                     <h1 style={{ 'top': this.state.order[4] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[4]}</h1>
                 </div>
 
-                <div className='StartGamebuttonBox2'>
-                    {this.state.showPlayer && <button className="initialButton" onClick={() => this.applyRule('opOne')}><span>Option One</span></button>}
-                    {this.state.showPlayer && <button className="initialButton" onClick={() => this.applyRule('opTwo')}><span>Option Two</span></button>}
+                <div className='StartGameRuleButtonDiv'>
+                    {this.state.showPlayer && <button className="opButton" onClick={() => this.applyRule('opOne')}><span>Option One</span></button>}
+                    <span className='opButtonSpan'></span>
+                    {this.state.showPlayer && <button className="opButton" onClick={() => this.applyRule('opTwo')}><span>Option Two</span></button>}
                 </div>
 
-                {this.state.opOne && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.firstOp}</p></div>}
 
-                {this.state.opTwo && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.secondOp}</p></div>}
+                    {this.state.opOne && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.firstOp}</p></div>}
+
+                    {this.state.opTwo && <div className='optionDiv'><p>{this.props.reduxState.ruleReducer.secondOp}</p></div>}
+
+
 
             </div>
         );

@@ -1,42 +1,52 @@
-.StartGamebuttonBox {
+.StartGameDivContainer {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 40px;
-    flex-flow: row;
 }
 
-.StartGamebuttonBox2 {
+.StartGamePickPlayerDiv {
     display: flex;
     justify-content: center;
-    padding: 60px;
-    flex-flow: row;
+    flex-basis: auto;
+    padding: 40px;
 }
 
 .playerNameDiv {
     display: flex;
     justify-content: center;
+    flex-basis: auto;
+    align-self: center;
     width: 250px;
     height: 90px;
-    margin-left: 585px;
     background: rgba(56, 72, 77, 0.2);
     border: groove;
     font-family: 'Times New Roman', Times, serif;
-    position: relative;
     overflow: hidden;
+    position: relative;
 }
 
-h1{
+h1 {
     position: absolute;
+}
+
+.StartGameRuleButtonDiv {
+    display: flex;
+    justify-content: center;
+    flex-basis: auto;
+    align-content: center;
+    margin-top: 60px;
 }
 
 .optionDiv {
     display: flex;
     justify-content: center;
+    flex-basis: auto;
+    align-self: center;
     width: 500px;
     height: 60px;
-    margin-left: 33%;
     background: rgba(56, 72, 77, 0.2);
     border: groove;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:red
+    font-family: 'Times New Roman', Times, serif;
+    color: red
 }

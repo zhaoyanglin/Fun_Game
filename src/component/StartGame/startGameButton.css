@@ -1,0 +1,68 @@
+.startGamePickPlayerButton {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    color: aliceblue;
+    background-color: #FF4136;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #c7bfc1;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.startGamePickPlayerButton:hover {
+    background-color: #FFDC00;
+}
+
+.startGamePickPlayerButton:active {
+    background-color: #3D9970;
+    box-shadow: 0 5px #999;
+    transform: translateY(4px);
+    color: black;
+}
+
+.opButton {
+    position: relative;
+    background-color: #29bad7;
+    border: none;
+    font-size: 28px;
+    color: aliceblue;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.opButton:hover {
+    background-color: #08f7e3;
+    color: black;
+}
+
+.opButton:after {
+    content: "";
+    background: #169d9a;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.opButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.opButtonSpan {
+    width: 40px;
+}
