@@ -1,6 +1,5 @@
 .Nav {
     overflow: hidden;
-    background-color: rgba(56, 72, 77, 0.5);
 }
 
 .Nav a {
@@ -13,6 +12,5 @@
 }
 
 .Nav a:hover {
-    background-color: rgb(51, 43, 43, 0.8);
-    color: rgba(144, 171, 207, 0.9);
+    color: #01BEFE;
 }

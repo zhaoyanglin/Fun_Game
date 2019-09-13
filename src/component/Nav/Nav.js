@@ -21,7 +21,7 @@ class Nav extends Component {
                 </button></a>}
 
 
-                <Link to="/Player">
+                <Link to="/Players">
                     <i className="fa fa-fw fa-user"></i>Player List</Link>
 
                 <Link to="/">

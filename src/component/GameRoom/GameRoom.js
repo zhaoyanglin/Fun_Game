@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import '../GameRoom/GameRoom.css'
+import '../GameRoom/input.css'
+import '../GameRoom/gameRoomButton.css'
+
 
 class GameRoom extends Component {
 
@@ -41,28 +44,40 @@ class GameRoom extends Component {
 
         let playerList = this.props.reduxState.playerReducer.map((data, i) => {
             return (
-                <ul>
-                    <li key={i}>{data.name}</li>
-                </ul>
+                <li key={i}>{data.name}</li>
             )
         })
 
         return (
-            <div>
+            <div className='gameRoomDivContainer'>
 
-                    <h3>Enter Players Here</h3>
-
-                <div className='inputDiv'>
-                    <input className='input' placeholder="Enter Players" onChange={this.setPlayerState} value={this.state.player} />
+                <div className='h3Bar'>
+                    <h3 >Enter Players Here</h3>
                 </div>
 
-                <div className='buttonBoxGameRoom'>
-                    <button className="initialButton" onClick={() => this.addPlayer()}><span>Add</span></button>
-                    <Link to="/StartGame"><button className="initialButton"><span>Start Game</span></button></Link>
+
+                <label for='inp' className='inp'>
+                    <input className='inp' onChange={this.setPlayerState} value={this.state.player} />
+
+                    <span className='label'>Names</span>
+                    <span className='border'></span>
+                </label>
+
+
+                <div className='gameRoomButtonDiv'>
+
+                    <button className="gameRoomAddbutton" onClick={() => this.addPlayer()}>Add</button>
+
+                    <span className='spanInButtonDiv'></span>
+                    
+                    <Link to="/StartGame"><button className="gameRoomStartButton">Start Game</button></Link>
+
                 </div>
 
-                <div className='playerList'>
-                    {playerList}
+                <div className='gameRoomPlayerList'>
+                    <ul>
+                        {playerList}
+                    </ul>
                 </div>
 
             </div>

@@ -38,21 +38,22 @@ router.post('/', (req, res) => {
 })
 
 router.post('/exit', (req, res) => {
-// console.log('session is being closed=============');
+    // console.log('session is being closed=============');
 
-    req.session.destroy((err)=>{
+    req.session.destroy((err) => {
 
         console.log(err);
         res.sendStatus(201)
     })
 })
 
-new CronJob('0 0 */6 * * *', () => {
+new CronJob('* */6 * * *', () => {
 
     console.log('cronjob deleting data');
 
+    pool.query('DELETE FROM "player";')
     pool.query('DELETE FROM "room";')
-    pool.query('DELETE FROM "player;')
+
 
 }, null, true, 'America/Los_Angeles');
 

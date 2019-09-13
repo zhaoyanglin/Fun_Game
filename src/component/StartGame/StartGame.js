@@ -122,7 +122,7 @@ class StartGame extends Component {
 
         return (
 
-            <div>
+            <div className='StartGameDivContainer'>
 
                 <div className='StartGamebuttonBox'>
                     <button className="initialButton" onClick={() => this.allInOne()}><span>Pick Player</span></button>
