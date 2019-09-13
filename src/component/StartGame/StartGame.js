@@ -55,13 +55,13 @@ class StartGame extends Component {
         })
     }
 
-    pickPlayerNow = (first) => {
+    pickPlayerNow = () => {
 
         let playerArray = this.props.reduxState.playerReducer
         let newPlayerArray = []
         // console.log('this is the playerReducer:', playerArray);
 
-        if (playerArray.length < 5) {
+        if (playerArray.length < 4) {
             for (let i = 0; i < 5; i++) {
                 let pickedPlayer = playerArray[Math.floor(playerArray.length * Math.random())]
                 newPlayerArray.push(pickedPlayer.name)

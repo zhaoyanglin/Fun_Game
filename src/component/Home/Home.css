@@ -7,7 +7,7 @@ button {
     font-size: 25px;
     padding: 30px;
     border-radius: 12px;
-    background-color: #01BEFE;
+    background: radial-gradient(circle, rgba(238, 96, 156, 1) 0%, rgba(182, 148, 202, 1) 26%, rgba(207, 108, 201, 1) 66%);
     color: aliceblue;
     border: 2px solid aliceblue;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -33,7 +33,7 @@ button {
 }
 
 .initialButton:hover {
-    background-color: #72b130;
+    background: radial-gradient(circle, rgba(182, 148, 202, 1) 0%, rgba(207, 108, 201, 1) 48%, rgba(238, 96, 156, 1) 66%);
     color: black;
     border: 2px solid black;
     padding-right: 40px;

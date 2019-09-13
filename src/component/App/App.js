@@ -15,7 +15,28 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
+      <div className="background">
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+        <span className='omgSpan'></span>
+
         <Router>
           <div>
             <Nav />

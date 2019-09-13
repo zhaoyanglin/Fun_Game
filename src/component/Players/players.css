@@ -23,7 +23,7 @@ th {
 }
 
 thead th {
-    background-color: rgba(8, 247, 227, .5);
+    background: linear-gradient(90deg, rgba(179, 176, 169, 0.6741071428571428) 15%, rgba(155, 76, 173, 0.8813900560224089) 50%, rgba(69, 252, 236, 0.5116421568627452) 85%);
 }
 
 tbody tr:hover {

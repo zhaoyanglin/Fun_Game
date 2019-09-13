@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
+    position: relative;
 }
 
 .h3Bar {
@@ -32,6 +33,8 @@
     font-family: 'Courier New', Courier, monospace;
     border: groove;
     overflow: scroll;
+    color: aliceblue;
+    font-size: 25px;
 }
 
 ul {

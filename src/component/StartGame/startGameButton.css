@@ -4,27 +4,28 @@
     text-align: center;
     outline: none;
     color: aliceblue;
-    background-color: #FF4136;
+    background: linear-gradient(90deg, rgba(248, 54, 0, 0.9374124649859944) 0%, rgba(249, 212, 35, 0.861782212885154) 70%);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
     font-family: 'Times New Roman', Times, serif;
+    transition: .2s;
 }
 
 .startGamePickPlayerButton:hover {
-    background-color: #FFDC00;
+    background: rgba(249, 212, 35, 0.861782212885154);
 }
 
 .startGamePickPlayerButton:active {
-    background-color: #3D9970;
-    box-shadow: 0 5px #999;
+    background: rgba(248, 54, 0, 0.9374124649859944);
+    box-shadow: 0 5px #33343b;
     transform: translateY(4px);
-    color: black;
+    color: aliceblue;
 }
 
 .opButton {
     position: relative;
-    background-color: #29bad7;
+    background: linear-gradient(90deg, rgba(21, 21, 25, 0.8785889355742297) 50%, rgba(255, 0, 0, 0.8281687675070029) 100%);
     border: none;
     font-size: 28px;
     color: aliceblue;
@@ -36,16 +37,17 @@
     overflow: hidden;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
+    outline: none;
 }
 
 .opButton:hover {
-    background-color: #08f7e3;
+    background: radial-gradient(circle, rgba(51, 52, 59, 1) 0%, rgba(199, 191, 193, 1) 100%);
     color: black;
 }
 
 .opButton:after {
     content: "";
-    background: #169d9a;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 1) 50%, rgba(21, 21, 25, 1) 100%);
     display: block;
     position: absolute;
     padding-top: 300%;

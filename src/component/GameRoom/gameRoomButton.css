@@ -4,21 +4,23 @@
     text-align: center;
     outline: none;
     color: aliceblue;
-    background-color: #FF4136;
+    background: linear-gradient(90deg, rgba(248, 54, 0, 0.9374124649859944) 0%, rgba(249, 212, 35, 0.861782212885154) 70%);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
+    transition: .2s;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .gameRoomAddbutton:hover {
-    background-color: #FFDC00;
+    background: rgba(249, 212, 35, 0.861782212885154);
 }
 
 .gameRoomAddbutton:active {
-    background-color: #3D9970;
-    box-shadow: 0 5px #999;
+    background: rgba(248, 54, 0, 0.9374124649859944);
+    box-shadow: 0 5px #33343b;
     transform: translateY(4px);
-    color: black;
+    color: aliceblue;
 }
 
 .gameRoomStartButton {
@@ -27,21 +29,22 @@
     text-align: center;
     outline: none;
     color: aliceblue;
-    background-color: #3D9970;
+    background: linear-gradient(90deg, rgba(249, 212, 35, 0.861782212885154) 35%, rgba(248, 54, 0, 0.9626225490196079) 70%);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
+    transition: .2s;
 }
 
 .gameRoomStartButton:hover {
-    background-color: #FFDC00;
+    background: rgba(248, 54, 0, 0.9374124649859944);
 }
 
 .gameRoomStartButton:active {
-    background-color: #FF4136;
-    box-shadow: 0 5px #999;
+    background: rgba(249, 212, 35, 0.861782212885154);
+    box-shadow: 0 5px #33343b;
     transform: translateY(4px);
-    color: black;
+    color: aliceblue;
 }
 
 .spanInButtonDiv {
