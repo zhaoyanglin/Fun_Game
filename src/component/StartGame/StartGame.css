@@ -46,12 +46,12 @@ h1 {
     flex-basis: auto;
     align-self: center;
     width: 500px;
-    height: 70px;
+    height: 100px;
     background: rgba(56, 72, 77, 0.2);
     border: groove;
     font-family: "Comic Sans MS", cursive, sans-serif;
     color: aliceblue;
     overflow: scroll;
     font-size: 130%;
-    color: black;
+    color: aliceblue;
 }

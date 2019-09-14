@@ -4,7 +4,7 @@
     text-align: center;
     outline: none;
     color: aliceblue;
-    background: linear-gradient(90deg, rgba(248, 54, 0, 0.9374124649859944) 0%, rgba(249, 212, 35, 0.861782212885154) 70%);
+    background: rgba(241, 229, 65, 0.923406862745098);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
@@ -29,7 +29,7 @@
     text-align: center;
     outline: none;
     color: aliceblue;
-    background: linear-gradient(90deg, rgba(249, 212, 35, 0.861782212885154) 35%, rgba(248, 54, 0, 0.9626225490196079) 70%);
+    background: rgba(241, 229, 65, 0.923406862745098);
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
@@ -37,11 +37,11 @@
 }
 
 .gameRoomStartButton:hover {
-    background: rgba(248, 54, 0, 0.9374124649859944);
+    background: rgba(249, 212, 35, 0.861782212885154);
 }
 
 .gameRoomStartButton:active {
-    background: rgba(249, 212, 35, 0.861782212885154);
+    background: rgba(248, 54, 0, 0.9374124649859944);
     box-shadow: 0 5px #33343b;
     transform: translateY(4px);
     color: aliceblue;
