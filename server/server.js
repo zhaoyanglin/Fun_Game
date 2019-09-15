@@ -24,7 +24,7 @@ app.use(express.static('build'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.set('trust proxy', 1) 
 app.use(session({
     name:SESS_NAME,
     resave:false,
