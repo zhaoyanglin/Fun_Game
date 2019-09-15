@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    position: relative;
 }
 
 .h3Bar {
@@ -14,6 +13,7 @@
     margin-top: 2%;
     font-family: 'Courier New', Courier, monospace;
     color: aliceblue;
+    position: relative;
 }
 
 .gameRoomButtonDiv {
@@ -21,6 +21,7 @@
     justify-content: center;
     flex-basis: auto;
     padding: 50px;
+    position: relative;
 }
 
 .gameRoomPlayerList {
@@ -35,6 +36,7 @@
     overflow: scroll;
     color: aliceblue;
     font-size: 25px;
+    position: relative;
 }
 
 ul {

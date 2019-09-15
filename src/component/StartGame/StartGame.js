@@ -61,7 +61,7 @@ class StartGame extends Component {
         let newPlayerArray = []
         // console.log('this is the playerReducer:', playerArray);
 
-        if (playerArray.length < 4) {
+        if (playerArray.length <= 5) {
             for (let i = 0; i < 5; i++) {
                 let pickedPlayer = playerArray[Math.floor(playerArray.length * Math.random())]
                 newPlayerArray.push(pickedPlayer.name)

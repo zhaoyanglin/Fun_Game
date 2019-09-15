@@ -5,7 +5,9 @@ import '../Players/players.css'
 
 class Players extends Component {
 
-    
+    deletePlayer = () => {
+        
+    }
 
     render() {
 

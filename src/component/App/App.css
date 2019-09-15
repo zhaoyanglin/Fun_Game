@@ -7,6 +7,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: #3E1E68;
+    z-index: -1;
 }
 
 .background .omgSpan {

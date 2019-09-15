@@ -3,7 +3,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
 }
 
 .StartGamePickPlayerDiv {
@@ -11,6 +10,7 @@
     justify-content: center;
     flex-basis: auto;
     padding: 40px;
+    position: relative;
 }
 
 .playerNameDiv {
@@ -54,4 +54,5 @@ h1 {
     overflow: scroll;
     font-size: 130%;
     color: aliceblue;
+    position: relative;
 }

@@ -1,5 +1,6 @@
 .Nav {
     overflow: hidden;
+    position: relative;
 }
 
 .Nav a {
@@ -12,5 +13,9 @@
 }
 
 .Nav a:hover {
+    color: black;
+}
+
+.aNav button:hover {
     color: black;
 }

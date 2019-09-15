@@ -3,10 +3,10 @@
 }
 
 .inp {
-    position: relative;
     margin: auto;
     width: 100%;
     max-width: 280px;
+    position: relative;
 }
 
 .inp .label {

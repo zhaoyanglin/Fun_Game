@@ -15,6 +15,7 @@ button {
     margin: 5px;
     transition: all 0.2s;
     width: 275px;
+    position: relative;
 }
 
 .initialButton span {

@@ -48,38 +48,46 @@ class GameRoom extends Component {
             )
         })
 
+        let foundRoom = this.props.reduxState.roomReducer.foundRoom;
+
+        console.log('run-------------------')
+
         return (
-            <div className='gameRoomDivContainer'>
-
-                <div className='h3Bar'>
-                    <h3 >Enter Players Here</h3>
-                </div>
-
-
-                <label for='inp' className='inp'>
-                    <input className='inp' onChange={this.setPlayerState} value={this.state.player} />
-
-                    <span className='label'>Names</span>
-                    <span className='border'></span>
-                </label>
-
-
-                <div className='gameRoomButtonDiv'>
-
-                    <button className="gameRoomAddbutton" onClick={() => this.addPlayer()}>Add</button>
-
-                    <span className='spanInButtonDiv'></span>
+            <div>
+            {foundRoom && 
+                <div className='gameRoomDivContainer'>
                     
-                    <Link to="/StartGame"><button className="gameRoomStartButton">Start Game</button></Link>
+                    <div className='h3Bar'>
+                        <h3 >Enter Players Here</h3>
+                    </div>
 
-                </div>
 
-                <div className='gameRoomPlayerList'>
-                    <ul>
-                        {playerList}
-                    </ul>
-                </div>
+                    <label for='inp' className='inp'>
+                        <input className='inp' onChange={this.setPlayerState} value={this.state.player} />
 
+                        <span className='label'>Names</span>
+                        <span className='border'></span>
+                    </label>
+
+
+                    <div className='gameRoomButtonDiv'>
+
+                        <button className="gameRoomAddbutton" onClick={() => this.addPlayer()}>Add</button>
+
+                        <span className='spanInButtonDiv'></span>
+                        
+                        <Link to="/StartGame"><button className="gameRoomStartButton">Start Game</button></Link>
+
+                    </div>
+
+                    <div className='gameRoomPlayerList'>
+                        <ul>
+                            {playerList}
+                        </ul>
+                    </div>
+                    
+
+                </div>}
             </div>
         );
     }
