@@ -11,7 +11,7 @@ const TWO_HOURS = 1000 * 60 * 60 * 2
 
 const {
     PORT = 5000,
-    NODE_ENV = 'production',
+    NODE_ENV = 'development',
 
     SESS_NAME = 'sid',
     SESS_SECRET = 'my_secret',
@@ -32,7 +32,7 @@ app.use(session({
     secret:SESS_SECRET,
     cookie:{
         maxAge:SESS_LIFETIME,
-        sameSite:true,
+        sameSite:false,
         secure: IN_PROD
     }
 }))
