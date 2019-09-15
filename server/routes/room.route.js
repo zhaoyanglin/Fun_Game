@@ -47,7 +47,7 @@ router.post('/exit', (req, res) => {
     })
 })
 
-new CronJob('* *6 * * *', () => {
+new CronJob('0 0 * * *', () => {
 
     console.log('cronjob deleting data');
 

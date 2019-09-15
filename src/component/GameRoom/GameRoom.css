@@ -11,7 +11,7 @@
     justify-content: center;
     flex-basis: auto;
     margin-top: 2%;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rakkas', cursive;
     color: aliceblue;
     position: relative;
 }
@@ -31,7 +31,7 @@
     width: 300px;
     height: 400px;
     align-self: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rakkas', cursive;
     border: groove;
     overflow: scroll;
     color: aliceblue;

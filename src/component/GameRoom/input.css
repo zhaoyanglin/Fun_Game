@@ -16,7 +16,7 @@
     font-weight: 500;
     transform-origin: 0 0;
     transition: all 0.2s ease;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rakkas', cursive;
     font-size: 120%;
 }
 
@@ -35,7 +35,7 @@
 .inp input {
     width: 100%;
     border: 0;
-    font-family: inherit;
+    font-family: 'Rakkas', cursive;
     padding: 12px 0;
     height: 48px;
     font-size: 16px;
@@ -45,7 +45,6 @@
     border-radius: 0;
     color: aliceblue;
     transition: all 0.15s ease;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .inp input:hover {
@@ -64,7 +63,7 @@
 
 .inp input:focus+span {
     color: #fc466b;
-    transform: translateY(-50px) scale(0.75);
+    transform: translateY(-60px) scale(0.75);
 }
 
 .inp input:focus+span+.border {

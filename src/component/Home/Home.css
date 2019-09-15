@@ -5,7 +5,7 @@ button {
 
 .initialButton {
     font-size: 25px;
-    padding: 30px;
+    padding: 35px;
     border-radius: 12px;
     background: radial-gradient(circle, rgba(238, 96, 156, 1) 0%, rgba(182, 148, 202, 1) 26%, rgba(207, 108, 201, 1) 66%);
     color: aliceblue;
@@ -14,8 +14,10 @@ button {
     text-align: center;
     margin: 5px;
     transition: all 0.2s;
-    width: 275px;
+    width: 290px;
     position: relative;
+    font-family: 'Rakkas', cursive;
+    outline: none;
 }
 
 .initialButton span {
@@ -29,7 +31,7 @@ button {
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -30px;
+    right: -20px;
     transition: 0.2s;
 }
 
@@ -37,7 +39,7 @@ button {
     background: radial-gradient(circle, rgba(182, 148, 202, 1) 0%, rgba(207, 108, 201, 1) 48%, rgba(238, 96, 156, 1) 66%);
     color: black;
     border: 2px solid black;
-    padding-right: 40px;
+    padding-right: 30px;
 }
 
 .initialButton:hover span:after {
@@ -48,6 +50,6 @@ button {
 .buttonBox {
     display: flex;
     justify-content: center;
-    padding: 250px;
+    padding: 225px;
     flex-flow: row;
 }

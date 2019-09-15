@@ -37,10 +37,14 @@ class GameRoom extends Component {
         })
     }
 
+    popUpForNoGood = () => {
+        alert("Please Enter Players")
+    }
+
 
     render() {
 
-        // console.log('this is the redux state in Game room', this.props.reduxState.playerReducer);
+        console.log('this is the redux state in Game room', this.props.reduxState.playerReducer);
 
         let playerList = this.props.reduxState.playerReducer.map((data, i) => {
             return (
@@ -49,8 +53,13 @@ class GameRoom extends Component {
         })
 
         let foundRoom = this.props.reduxState.roomReducer.foundRoom;
-
-        console.log('run-------------------')
+        
+        let startButton;
+        if (playerList.length > 0){
+             startButton = <Link to="/StartGame"><button className="gameRoomStartButton">Start Game</button></Link>
+        }else{
+             startButton = <button className="gameRoomStartButton" onClick={()=> this.popUpForNoGood() }>Start Game</button>
+        }
 
         return (
             <div>
@@ -62,7 +71,7 @@ class GameRoom extends Component {
                     </div>
 
 
-                    <label for='inp' className='inp'>
+                    <label htmlFor='inp' className='inp'>
                         <input className='inp' onChange={this.setPlayerState} value={this.state.player} />
 
                         <span className='label'>Names</span>
@@ -75,8 +84,8 @@ class GameRoom extends Component {
                         <button className="gameRoomAddbutton" onClick={() => this.addPlayer()}>Add</button>
 
                         <span className='spanInButtonDiv'></span>
-                        
-                        <Link to="/StartGame"><button className="gameRoomStartButton">Start Game</button></Link>
+
+                        {startButton}
 
                     </div>
 

@@ -9,7 +9,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
     transition: .2s;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Rakkas', cursive;
 }
 
 .gameRoomAddbutton:hover {
@@ -34,6 +34,7 @@
     border-radius: 15px;
     box-shadow: 0 9px #c7bfc1;
     transition: .2s;
+    font-family: 'Rakkas', cursive;
 }
 
 .gameRoomStartButton:hover {
