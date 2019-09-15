@@ -11,7 +11,7 @@ const TWO_HOURS = 1000 * 60 * 60 * 2
 
 const {
     PORT = 5000,
-    NODE_ENV = 'development',
+    NODE_ENV = 'production',
 
     SESS_NAME = 'sid',
     SESS_SECRET = 'my_secret',
