@@ -41,6 +41,13 @@ class GameRoom extends Component {
         alert("Please Enter Players")
     }
 
+    enterPressed = (event) => {
+        let code = event.keyCode || event.which
+        if(code === 13) {
+            this.addPlayer()
+        }
+    }
+
 
     render() {
 
@@ -72,7 +79,7 @@ class GameRoom extends Component {
 
 
                     <label htmlFor='inp' className='inp'>
-                        <input className='inp' onChange={this.setPlayerState} value={this.state.player} />
+                        <input className='inp' onChange={this.setPlayerState} value={this.state.player} onKeyPress={this.enterPressed.bind(this)}/>
 
                         <span className='label'>Names</span>
                         <span className='border'></span>
