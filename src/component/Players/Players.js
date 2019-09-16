@@ -5,6 +5,18 @@ import '../Players/players.css'
 
 class Players extends Component {
 
+componentDidMount = () => {
+    if(!this.props.reduxState.roomReducer.foundRoom) {
+        this.props.history.push("/")
+    }
+}
+
+componentDidUpdate = () => {
+    if (!this.props.reduxState.roomReducer.foundRoom) {
+        this.props.history.push("/")
+    }
+}
+
     deletePlayer = (key) => {
         this.props.dispatch({type:'DELETE_PLAYER', payload:key})
     }
@@ -33,6 +45,8 @@ class Players extends Component {
                         {currentPlayerList}
                     </tbody>
                 </table>
+
+
             </div>
         );
     }
