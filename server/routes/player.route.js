@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
 
     // console.log('this is player route router.get testing req.seesion:', req.session);
     
-    const queryText = `SELECT * FROM "player" JOIN "room" ON "player".player_room = "room".room_number
-WHERE "room".room_number = $1;`
+    const queryText = `SELECT * FROM "room" JOIN "player" ON "room".room_number = "player".player_room
+    WHERE "room".room_number = $1;`
 
     const queryItem = [req.session.roomId]
 
@@ -38,6 +38,19 @@ router.post('/', (req, res) => {
             console.log('INSERT INTO "room" error', error);
             res.sendStatus(500)
         })
+})
+
+router.delete('/:id',(req, res) => {
+    const queryText = 'DELETE FROM "player" WHERE id=$1';
+
+    pool.query(queryText,[req.params.id])
+    .then(()=> {
+        res.sendStatus(200)
+    })
+    .catch((error) => {
+        console.log('DELETE player error:',error);
+        res.sendStatus(500);        
+    })
 })
 
 module.exports = router;

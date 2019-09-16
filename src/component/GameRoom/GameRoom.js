@@ -44,7 +44,7 @@ class GameRoom extends Component {
 
     render() {
 
-        console.log('this is the redux state in Game room', this.props.reduxState.playerReducer);
+        // console.log('this is the redux state in Game room', this.props.reduxState.playerReducer);
 
         let playerList = this.props.reduxState.playerReducer.map((data, i) => {
             return (
