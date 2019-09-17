@@ -142,15 +142,15 @@ class StartGame extends Component {
                 </div>
 
                 <div className='playerNameDiv'>
-                    <h1 style={{ 'top': this.state.order[0] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[0]}</h1>
+                    <h2 style={{ 'top': this.state.order[0] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[0]}</h2>
 
-                    <h1 style={{ 'top': this.state.order[1] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[1]}</h1>
+                    <h2 style={{ 'top': this.state.order[1] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[1]}</h2>
 
-                    <h1 style={{ 'top': this.state.order[2] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[2]}</h1>
+                    <h2 style={{ 'top': this.state.order[2] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[2]}</h2>
 
-                    <h1 style={{ 'top': this.state.order[3] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[3]}</h1>
+                    <h2 style={{ 'top': this.state.order[3] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[3]}</h2>
 
-                    <h1 style={{ 'top': this.state.order[4] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[4]}</h1>
+                    <h2 style={{ 'top': this.state.order[4] * 150, 'transition': 'all 0.3s' }}>{this.state.finalArray[4]}</h2>
                 </div>
 
                 <div className='StartGameRuleButtonDiv'>
