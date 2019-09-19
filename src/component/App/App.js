@@ -40,12 +40,16 @@ class App extends Component {
         <Router>
           <div>
             <Nav />
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/GameRoom" component={GameRoom}/>
-            <Route exact path="/StartGame" component={StartGame}/>
-            <Route exact path="/Players" component={Players}/>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/GameRoom" component={GameRoom} />
+            <Route exact path="/StartGame" component={StartGame} />
+            <Route exact path="/Players" component={Players} />
           </div>
         </Router>
+
+        <div className='copyRight'>
+          <p>&#169; Copyright 2019 Zhaoyang Lin</p>
+        </div>
       </div>
     );
   }

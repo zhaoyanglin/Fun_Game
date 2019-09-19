@@ -227,3 +227,9 @@ body {
         transform: translate3d(0, 0, 1px) rotate(360deg);
     }
 }
+
+.copyRight {
+    color: rgba(84, 84, 84, 0.55);
+    display: flex;
+    justify-content: center;
+}

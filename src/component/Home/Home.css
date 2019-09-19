@@ -53,3 +53,19 @@ button {
     padding: 225px;
     flex-flow: row;
 }
+
+.popup-content {
+    background: red !important;
+    border: dotted !important;
+    font-family: 'Rakkas', cursive !important;
+}
+
+.closeButton {
+    float: right;
+    outline: none;
+}
+
+.closeButton:hover {
+    background-color: black;
+    color: aliceblue;
+}

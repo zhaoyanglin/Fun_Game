@@ -41,11 +41,11 @@ class Home extends Component {
         return (
             <div className="Home">
 
-                <Popup open={this.state.open} closeOnDocumentClick>
+                <Popup open={this.state.open} closeOnDocumentClick className="popup">
                     <div>
-                        <h1>This game is meant for people who are 21 and older. DO NOT DRINK AND DRIVE!</h1>
-                        <p>Hello Friends and families, this is going to be a 15 - 20min game at most if everyone follows the Rules. It is very simple, have a case of beer and couple bottles ready then enter everyones name into the game. Have fun and be safe!</p>
-                        <button onClick={() => this.closePopup()}>Close</button>
+                        <h1>This game is meant for people who are 21 and older. <br/>DO NOT DRINK AND DRIVE~!~!~!</h1>
+                        <p>Hello Friends, this is going to be a 15 - 20min game at most if everyone follows the Rules. It is very simple, have a case of beer and couple bottles ready then enter everyones name into the game. Have fun and be safe!</p>
+                        <button className='closeButton' onClick={() => this.closePopup()}>Close</button>
                     </div>
                 </Popup>
 
